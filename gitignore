@@ -42,7 +42,8 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
-
+.src/__pycache__
+.tests/__pycache__
 # Unit test / coverage reports
 htmlcov/
 .tox/
