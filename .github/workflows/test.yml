@@ -1,9 +1,9 @@
-name: Python Tests
+name: Debian Wiki News Scraper Tests
 
 on:
   push:
     branches:
-      - main  # Replace with your main branch name
+      - main
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9, 3.10]  # List the Python versions you want to test
+        python-version: [3.6, 3.7, 3.8, 3.9, 3.10]
 
     steps:
     - name: Checkout code
@@ -24,7 +24,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Install dependencies
-      run: pip install -r requirements.txt  # Replace with your dependencies file if needed
+      run: pip install -r requirements.txt 
 
     - name: Run tests
-      run: python -m unittest discover -s tests -p "*_test.py"  # Replace with your test discovery command
+      run: python3 tests -vv 

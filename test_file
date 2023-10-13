@@ -1,20 +1,4 @@
-# Latest News
-
-[07 Oct 2023] [Updated Debian 12: 12.2 released]( https://www.debian.org/News/2023/20231007 )
-<br>
-[07 Oct 2023] [Updated Debian 11: 11.8 released]( https://www.debian.org/News/2023/2023100702 )
-<br>
-[18 Sep 2023] [DebConf23 closes in Kochi and DebConf24 location announced]( https://www.debian.org/News/2023/20230918 )
-<br>
-[14 Sep 2023] [The Debian Project mourns the loss of Abraham Raji]( https://www.debian.org/News/2023/20230914 )
-<br>
-[22 Jul 2023] [Updated Debian 12: 12.1 released]( https://www.debian.org/News/2023/20230722 )
-<br>
-[10 Jun 2023] [Debian 12bookwormreleased]( https://www.debian.org/News/2023/20230610 )
-<br>
-[29 Apr 2023] [Updated Debian 11: 11.7 released]( https://www.debian.org/News/2023/20230429 )
-<br>
-***
+f_output="
 
 
 
@@ -266,4 +250,4 @@ See our[contact page](https://www.debian.org/contact)to get in touch. Web site s
 
 Last Modified: Mon, Nov 4 13:44:32 UTC 2019
  
-Last Built: Thu, Oct 12 19:28:40 UTC 2023Copyright © 1997-2019[SPI]( https://www.spi-inc.org/ )and others; See[license terms](https://www.debian.org/license)Debian is a registered[trademark](https://www.debian.org/trademark)of Software in the Public Interest, Inc.
+Last Built: Thu, Oct 12 19:28:40 UTC 2023Copyright © 1997-2019[SPI]( https://www.spi-inc.org/ )and others; See[license terms](https://www.debian.org/license)Debian is a registered[trademark](https://www.debian.org/trademark)of Software in the Public Interest, Inc."

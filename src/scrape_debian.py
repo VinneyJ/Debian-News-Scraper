@@ -1,7 +1,6 @@
+import os
 import requests
 from bs4 import BeautifulSoup
-
-
 
 
 default_url = 'https://www.debian.org/'
@@ -63,7 +62,8 @@ def extract_footer():
         link_text = link.get_text(strip=True)
         href = link['href']
         href = all_links_modifier(href)
-        formatted_footer += f'\n\n [{link_text}]({href})'
+        formatted_footer += f' \n\n [{link_text}]({href})\n'
+
     return formatted_footer
 
 
@@ -76,16 +76,25 @@ with open('debian_news.md', 'w') as f:
 
 def extract_text_with_links(element):
     text = ''
-    for item in element.contents:
+
+    for item in element:
+
         if isinstance(item, str):
             text += item.strip()
+
+            if text == 'Latest News':
+                text = ''
         elif item.name == 'a':
             link_text = item.get_text(strip=True)
             href = item['href']
             href = all_links_modifier(href)
             text += f'[{link_text}]({href})'
+            if text == "[Skip Quicknav]( #content )":
+                text = ''
+
 
     return text
+    
 
 
 
@@ -97,22 +106,19 @@ def extract_paragraphs(languages, footers):
     '''
 
     paragraphs = soup.find_all('p')
-    #print(paragraphs)
+
 
     formatted_text = []
+    
 
     executed = False
     for paragraph in paragraphs:
 
-
         text = extract_text_with_links(paragraph)
-        
 
-        if text.startswith(f"[Skip Quicknav]( #content )") or text == "Latest News":
-            text = ''
         if text.startswith("Back to the[Debian Project homepage]") and executed == False:
-            text = f"***\n\n Back to the[Debian Project homepage]({default_url})."
-            text += f'\n\n {languages} \n\n *** \n\n {footers}'
+            text = f"*** \n Back to the[Debian Project homepage]({default_url})."
+            text += f'\n {languages} \n *** \n\n {footers}'
             executed = True
 
         formatted_text.append(text)
@@ -135,14 +141,19 @@ tt_elements = soup.find_all('tt')
 strong_elements = soup.find_all('strong')
 
 def save_to_markdown_file(paragraph_output):
-    with open('debian_news.md', 'a') as f:
+
+    parent_dir_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+
+    file_path = os.path.join(parent_dir_path, 'debian_news.md')
+
+    with open(file_path , 'a') as f:
         for tt, strong in zip(tt_elements, strong_elements):
             tt_content = tt.get_text(strip=True)
             strong_content = strong.a.get_text(strip=True)
             href = strong.a['href']
             href = all_links_modifier(href)
-            f.write(f'{tt_content} [{strong_content}]({href})\n\n')
-        f.write('***\n\n')
+            f.write(f'{tt_content} [{strong_content}]({href})\n<br>\n')
+        f.write('***')
 
         f.write(f'{paragraph_output}')
         print("Content saved to 'debian_news.md'")
