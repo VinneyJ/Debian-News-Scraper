@@ -27,4 +27,4 @@ jobs:
       run: pip install -r requirements.txt 
 
     - name: Run tests
-      run: python3 tests/test_debian_scraper -vv 
+      run: python3 tests/test_debian_scraper.py -vv 
