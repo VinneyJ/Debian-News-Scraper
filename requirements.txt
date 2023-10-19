@@ -23,7 +23,6 @@ decorator==4.4.2
 dill==0.3.7
 distlib==0.3.4
 distro==1.7.0
-distro-info==1.1+ubuntu0.1
 dnspython==2.1.0
 duplicity==0.8.21
 evdev==1.4.0
