@@ -20,7 +20,6 @@ cssutils==1.0.2
 cycler==0.11.0
 dbus-python==1.2.18
 decorator==4.4.2
-defer==1.0.6
 dill==0.3.7
 distlib==0.3.4
 distro==1.7.0
