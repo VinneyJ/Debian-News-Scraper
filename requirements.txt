@@ -13,7 +13,6 @@ chardet==4.0.0
 cheap-repr==0.5.1
 click==8.0.3
 colorama==0.4.4
-command-not-found==0.3
 cryptography==3.4.8
 css-parser==1.0.7
 cssselect==1.1.0
