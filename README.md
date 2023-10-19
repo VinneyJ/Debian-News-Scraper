@@ -34,6 +34,12 @@ Scrape Debian Wiki News is a Python script that retrieves content from the Debia
     pip install -r requirements.txt
 ```
 
+6. Install the current directory as an editable package.
+
+```
+  pip install -e .
+```
+
 ## Usage
 
 After setting up the project and installing the dependencies, you can run the script as follows:

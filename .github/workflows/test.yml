@@ -25,6 +25,16 @@ jobs:
 
       - name: Install dependencies
         run: pip install --upgrade pip && pip install -r requirements.txt
+      
+        # Run isort and black
+      - name: Run isort and black
+        run: black . && isort .
+
+      - name: Install editable package
+        run: pip install -e .
 
       - name: Run tests
         run: python3 -m pytest tests/test_debian_scraper.py -vv
+
+      - name: Run pylint
+        run: pylint src/scrape_debian.py tests/test_debian_scraper.py

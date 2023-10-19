@@ -1,0 +1,11 @@
+README.md
+setup.py
+debian_wiki.egg-info/PKG-INFO
+debian_wiki.egg-info/SOURCES.txt
+debian_wiki.egg-info/dependency_links.txt
+debian_wiki.egg-info/top_level.txt
+src/__init__.py
+src/scrape_debian.py
+tests/__init__.py
+tests/content_file.py
+tests/test_debian_scraper.py

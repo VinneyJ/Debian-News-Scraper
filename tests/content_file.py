@@ -1,4 +1,6 @@
-languages_output="""***
+# pylint: disable=all
+
+languages_output = """***
 
  This page is also available in the following languages:
 
@@ -241,9 +243,7 @@ Last Modified: Mon, Nov 4 13:44:32 UTC 2019
 Last Built: Thu, Oct 12 19:28:40 UTC 2023Copyright © 1997-2019[SPI]( https://www.spi-inc.org/ )and others; See[license terms](https://www.debian.org/license)Debian is a registered[trademark](https://www.debian.org/trademark)of Software in the Public Interest, Inc."""
 
 
-
-
-extract_paragraphs_data="""
+extract_paragraphs_data = """
 
 
 
@@ -498,10 +498,7 @@ Last Modified: Mon, Nov 4 13:44:32 UTC 2019
 Last Built: Thu, Oct 12 19:28:40 UTC 2023Copyright © 1997-2019[SPI]( https://www.spi-inc.org/ )and others; See[license terms](https://www.debian.org/license)Debian is a registered[trademark](https://www.debian.org/trademark)of Software in the Public Interest, Inc."""
 
 
-
-
-
-format_paragraph_output="""
+format_paragraph_output = """
 
 
 
