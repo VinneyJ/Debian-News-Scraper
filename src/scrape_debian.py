@@ -158,8 +158,8 @@ def save_to_markdown_file(paragraph_output):
     file_path = os.path.join(parent_dir_path, "debian_news.md")
 
     with open(file_path, "a", encoding="UTF-8") as file:
-        for tt, strong in zip(tt_elements, strong_elements):
-            tt_content = tt.get_text(strip=True)
+        for tt_item, strong in zip(tt_elements, strong_elements):
+            tt_content = tt_item.get_text(strip=True)
             strong_content = strong.a.get_text(strip=True)
             href = strong.a["href"]
             href = all_links_modifier(href)

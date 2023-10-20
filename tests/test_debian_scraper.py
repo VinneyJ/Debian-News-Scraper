@@ -81,7 +81,7 @@ def test_save_to_markdown_file():
     parent_dir_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
     file_path = os.path.join(parent_dir_path, "debian_news.md")
-    with open(file_path, "r", encoding="UTF-8") as f:
-        markdown_contents = f.read()
+    with open(file_path, "r", encoding="UTF-8") as file:
+        markdown_contents = file.read()
 
     assert markdown_contents == final_data
