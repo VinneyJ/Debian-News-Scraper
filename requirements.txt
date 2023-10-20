@@ -102,7 +102,6 @@ PyQt5-sip==12.9.1
 PyQtWebEngine==5.15.5
 pyRFC3339==1.1
 pytest==7.4.2
-python-apt==2.4.0+ubuntu2
 python-dateutil==2.8.1
 python-debian==0.1.43+ubuntu1.1
 python-magic==0.4.24
