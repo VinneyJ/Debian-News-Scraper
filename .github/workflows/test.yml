@@ -37,5 +37,8 @@ jobs:
       - name: Run tests
         run: python3 -m pytest tests/test_debian_scraper.py -vv
 
+      - name: Install Pylint
+        run: pip install pylint
+        
       - name: Run pylint
-        run: pylint src/scrape_debian.py tests/test_debian_scraper.py
+        run: pylint src/ tests/
