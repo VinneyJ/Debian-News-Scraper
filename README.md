@@ -59,6 +59,19 @@ You can run the provided tests to ensure the script's functionality:
     pytest tests -vv
 ```
 
+## Code Formatting
+
+To format the code use
+
+```
+    black . && isort . 
+```
+
+## Code Linting
+To lint the code use
+```
+  pylint src/ tests/
+```
 
 ## Questions
 
