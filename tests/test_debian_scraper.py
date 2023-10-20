@@ -6,11 +6,20 @@ import os
 
 from bs4 import BeautifulSoup
 
-from src.scrape_debian import (all_links_modifier, extract_footer,
-                               extract_languages, extract_paragraphs,
-                               extract_text_with_links, save_to_markdown_file)
-from tests.content_file import (extract_footer_link, final_data,
-                                format_paragraph_output, languages_output)
+from src.scrape_debian import (
+    all_links_modifier,
+    extract_footer,
+    extract_languages,
+    extract_paragraphs,
+    extract_text_with_links,
+    save_to_markdown_file,
+)
+from tests.content_file import (
+    extract_footer_link,
+    final_data,
+    format_paragraph_output,
+    languages_output,
+)
 
 
 def test_all_links_modifier():
