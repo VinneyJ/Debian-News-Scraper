@@ -13,7 +13,6 @@ def response_status(response):
     """
     checks the response status of the request url
     """
-    # print(response)
     try:
         response.raise_for_status()
     except requests.exceptions.HTTPError as http_error:
@@ -173,12 +172,7 @@ def process_debian_news(url, default_url):
 
     soup2 = BeautifulSoup(response.content, "html.parser")
 
-    # title = soup.find(href="2023/")
 
-    # with open("debian_news.md", "w", encoding="UTF-8") as file:
-    #     file.write(f"# {title.get_text(strip=True)}\n\n")
-
-    # Extract and print <tt>, <strong><a>, and href content side by side
 
     parent_dir_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
@@ -190,7 +184,7 @@ def process_debian_news(url, default_url):
         formatted_content = extract_paragraphs(
             languages_content, footer_content, soup, default_url, url
         )
-        # print(formatted_content)
+        
         save_to_markdown_file(formatted_content, soup, default_url, url, file_path)
     except Exception as error:  # pylint: disable=broad-except
         error_message = str(error)
